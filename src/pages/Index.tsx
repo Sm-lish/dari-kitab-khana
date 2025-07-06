@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +9,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import EbookCard from "@/components/EbookCard";
 import Header from "@/components/Header";
 import CartSheet from "@/components/CartSheet";
-import AnimatedBook3D from "@/components/AnimatedBook3D";
 
 // Sample ebook data in Dari
 const sampleEbooks = [
@@ -129,24 +129,18 @@ const Index = () => {
   const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-persian-50 to-orange-50">
       <Header cart={cart} onCartOpen={() => setIsCartOpen(true)} />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500">
+      <section className="relative py-20 px-4 text-center bg-gradient-to-r from-persian-600 via-persian-500 to-orange-500">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             خانه کتاب
           </h1>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-persian-100 mb-8 max-w-2xl mx-auto">
             هزاران کتاب الکترونیک در دسترس شما - از تاریخ و ادبیات تا علم و تکنولوژی
           </p>
-          
-          {/* 3D Book Animation */}
-          <div className="mb-8">
-            <AnimatedBook3D />
-          </div>
-          
           <div className="relative max-w-md mx-auto">
             <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
@@ -171,8 +165,8 @@ const Index = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`rounded-full px-6 py-2 transition-all ${
                   selectedCategory === category 
-                    ? "bg-orange-600 hover:bg-orange-700 text-white" 
-                    : "border-orange-200 text-orange-700 hover:bg-orange-50"
+                    ? "bg-persian-600 hover:bg-persian-700 text-white" 
+                    : "border-persian-200 text-persian-700 hover:bg-persian-50"
                 }`}
               >
                 {category}
@@ -202,7 +196,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-600 to-amber-500 text-white">
+      <section className="py-16 bg-gradient-to-r from-persian-600 to-orange-500 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">چرا ما را انتخاب کنید؟</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
