@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react';
+import React, { useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Text, Box, Environment, Float, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
@@ -69,7 +69,6 @@ const Book3D = () => {
           color="#FFD700"
           anchorX="center"
           anchorY="middle"
-          font="/fonts/NotoSansArabic-Bold.woff"
           textAlign="center"
         >
           خانه کتاب
@@ -81,7 +80,6 @@ const Book3D = () => {
           color="#FFD700"
           anchorX="center"
           anchorY="middle"
-          font="/fonts/NotoSansArabic-Regular.woff"
           textAlign="center"
         >
           کتاب‌های الکترونیک
@@ -105,28 +103,34 @@ const AnimatedBook3D = () => {
       <Canvas
         camera={{ position: [0, 0, 6], fov: 50 }}
         className="w-full h-full"
+        gl={{ antialias: true, alpha: true }}
+        onCreated={({ gl }) => {
+          gl.setClearColor(0x000000, 0);
+        }}
       >
-        <ambientLight intensity={0.5} />
-        <spotLight 
-          position={[10, 10, 10]} 
-          angle={0.15} 
-          penumbra={1} 
-          intensity={1}
-          castShadow
-        />
-        <pointLight position={[-10, -10, -10]} intensity={0.3} />
-        
-        <Book3D />
-        
-        <Environment preset="sunset" />
-        <OrbitControls 
-          enableZoom={false} 
-          enablePan={false}
-          autoRotate
-          autoRotateSpeed={0.5}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
+        <Suspense fallback={null}>
+          <ambientLight intensity={0.5} />
+          <spotLight 
+            position={[10, 10, 10]} 
+            angle={0.15} 
+            penumbra={1} 
+            intensity={1}
+            castShadow
+          />
+          <pointLight position={[-10, -10, -10]} intensity={0.3} />
+          
+          <Book3D />
+          
+          <Environment preset="sunset" />
+          <OrbitControls 
+            enableZoom={false} 
+            enablePan={false}
+            autoRotate
+            autoRotateSpeed={0.5}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+        </Suspense>
       </Canvas>
     </div>
   );
