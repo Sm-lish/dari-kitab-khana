@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ShoppingCart, Book, User, Menu } from "lucide-react";
+import { ShoppingCart, User, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 interface HeaderProps {
@@ -16,8 +16,12 @@ const Header = ({ cart, onCartOpen }: HeaderProps) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3 space-x-reverse">
-            <Book className="w-8 h-8 text-persian-600" />
-            <h1 className="text-2xl font-bold gradient-text">کتابخانه دیجیتال</h1>
+            <img 
+              src="/lovable-uploads/b8506947-de07-433b-9b4a-e9946d6d1b78.png" 
+              alt="خانه کتاب" 
+              className="w-10 h-10 object-contain"
+            />
+            <h1 className="text-2xl font-bold gradient-text">خانه کتاب</h1>
           </div>
 
           {/* Desktop Navigation */}

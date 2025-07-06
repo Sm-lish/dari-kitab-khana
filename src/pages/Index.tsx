@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ShoppingCart, Download, Star, Book, Search, User, Menu } from "lucide-react";
+import { ShoppingCart, Download, Star, Search, User, Menu } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import EbookCard from "@/components/EbookCard";
@@ -136,7 +136,7 @@ const Index = () => {
       <section className="relative py-20 px-4 text-center bg-gradient-to-r from-persian-600 via-persian-500 to-orange-500">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            کتابخانه دیجیتال
+            خانه کتاب
           </h1>
           <p className="text-xl text-persian-100 mb-8 max-w-2xl mx-auto">
             هزاران کتاب الکترونیک در دسترس شما - از تاریخ و ادبیات تا علم و تکنولوژی
@@ -220,14 +220,18 @@ const Index = () => {
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center mb-6">
-            <Book className="w-8 h-8 ml-2" />
-            <span className="text-2xl font-bold">کتابخانه دیجیتال</span>
+            <img 
+              src="/lovable-uploads/b8506947-de07-433b-9b4a-e9946d6d1b78.png" 
+              alt="خانه کتاب" 
+              className="w-8 h-8 ml-2 object-contain"
+            />
+            <span className="text-2xl font-bold">خانه کتاب</span>
           </div>
           <p className="text-gray-400 mb-6">
             بهترین کتاب‌های الکترونیک را با ما کشف کنید
           </p>
           <div className="text-sm text-gray-500">
-            © 2024 کتابخانه دیجیتال. تمام حقوق محفوظ است.
+            © 2024 خانه کتاب. تمام حقوق محفوظ است.
           </div>
         </div>
       </footer>
