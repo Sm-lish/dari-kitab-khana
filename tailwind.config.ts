@@ -63,32 +63,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Updated color palette to match the warm, nutty theme
-				brown: {
-					50: '#fdf8f6',
-					100: '#f2e8e5',
-					200: '#eaddd7',
-					300: '#e0cec7',
-					400: '#d2bab0',
-					500: '#bfa094',
-					600: '#a18072',
-					700: '#977669',
-					800: '#846358',
-					900: '#43302b',
-					950: '#362620',
-				},
-				nut: {
-					50: '#fef7ed',
-					100: '#fdecd4',
-					200: '#fad5a8',
-					300: '#f6b871',
-					400: '#f19438',
-					500: '#ed7615',
-					600: '#de5c0b',
-					700: '#b8450c',
-					800: '#933611',
-					900: '#762e12',
-					950: '#401507',
+				// Updated teal color palette to match the uploaded image
+				teal: {
+					50: '#f0fdfa',
+					100: '#ccfbf1',
+					200: '#99f6e4',
+					300: '#5eedd8',
+					400: '#2dd4bf',
+					500: '#14b8a6',
+					600: '#0d9488',
+					700: '#0f766e',
+					800: '#115e59',
+					900: '#134e4a',
+					950: '#042f2e',
 				}
 			},
 			borderRadius: {

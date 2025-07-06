@@ -129,16 +129,16 @@ const Index = () => {
   const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-brown-50 to-nut-50">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-cyan-50">
       <Header cart={cart} onCartOpen={() => setIsCartOpen(true)} />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-r from-brown-800 via-brown-700 to-nut-700">
+      <section className="relative py-20 px-4 text-center bg-gradient-to-r from-teal-800 via-teal-700 to-cyan-700">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            خانه کتاب
+            خانه ی کتاب
           </h1>
-          <p className="text-xl text-brown-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
             هزاران کتاب الکترونیک در دسترس شما - از تاریخ و ادبیات تا علم و تکنولوژی
           </p>
           <div className="relative max-w-md mx-auto">
@@ -165,8 +165,8 @@ const Index = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`rounded-full px-6 py-2 transition-all ${
                   selectedCategory === category 
-                    ? "bg-brown-700 hover:bg-brown-800 text-white" 
-                    : "border-brown-200 text-brown-700 hover:bg-brown-50"
+                    ? "bg-teal-700 hover:bg-teal-800 text-white" 
+                    : "border-teal-200 text-teal-700 hover:bg-teal-50"
                 }`}
               >
                 {category}
@@ -196,7 +196,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-brown-700 to-nut-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-teal-700 to-cyan-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">چرا ما را انتخاب کنید؟</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -217,21 +217,21 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brown-900 text-white py-12 px-4">
+      <footer className="bg-teal-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center mb-6">
             <img 
               src="/lovable-uploads/b8506947-de07-433b-9b4a-e9946d6d1b78.png" 
-              alt="خانه کتاب" 
+              alt="خانه ی کتاب" 
               className="w-8 h-8 ml-2 object-contain"
             />
-            <span className="text-2xl font-bold">خانه کتاب</span>
+            <span className="text-2xl font-bold">خانه ی کتاب</span>
           </div>
-          <p className="text-brown-300 mb-6">
+          <p className="text-teal-300 mb-6">
             بهترین کتاب‌های الکترونیک را با ما کشف کنید
           </p>
-          <div className="text-sm text-brown-400">
-            © 2024 خانه کتاب. تمام حقوق محفوظ است.
+          <div className="text-sm text-teal-400">
+            © 2024 خانه ی کتاب. تمام حقوق محفوظ است.
           </div>
         </div>
       </footer>

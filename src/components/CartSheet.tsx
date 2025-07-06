@@ -49,8 +49,8 @@ const CartSheet = ({ cart, isOpen, onClose, onRemoveItem, totalAmount }: CartShe
               {/* Cart Items */}
               <div className="flex-1 overflow-y-auto space-y-4">
                 {cart.map((item) => (
-                  <div key={item.id} className="flex items-start space-x-3 space-x-reverse p-3 bg-brown-50 rounded-lg">
-                    <div className="w-16 h-20 bg-gradient-to-br from-brown-100 to-brown-200 rounded flex-shrink-0">
+                  <div key={item.id} className="flex items-start space-x-3 space-x-reverse p-3 bg-teal-50 rounded-lg">
+                    <div className="w-16 h-20 bg-gradient-to-br from-teal-100 to-teal-200 rounded flex-shrink-0">
                       <img
                         src={item.cover}
                         alt={item.title}
@@ -58,12 +58,12 @@ const CartSheet = ({ cart, isOpen, onClose, onRemoveItem, totalAmount }: CartShe
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-medium text-sm text-brown-900 line-clamp-2 mb-1">
+                      <h4 className="font-medium text-sm text-teal-900 line-clamp-2 mb-1">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-brown-600 mb-2">{item.author}</p>
+                      <p className="text-xs text-teal-600 mb-2">{item.author}</p>
                       <div className="flex items-center justify-between">
-                        <span className="font-bold text-brown-700">${item.price}</span>
+                        <span className="font-bold text-teal-700">${item.price}</span>
                         <Button
                           variant="ghost"
                           size="sm"
@@ -84,13 +84,13 @@ const CartSheet = ({ cart, isOpen, onClose, onRemoveItem, totalAmount }: CartShe
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-lg font-bold">
                   <span>مجموع:</span>
-                  <span className="text-brown-700">${totalAmount.toFixed(2)}</span>
+                  <span className="text-teal-700">${totalAmount.toFixed(2)}</span>
                 </div>
 
                 {/* PayPal Button */}
                 <Button
                   onClick={handleCheckout}
-                  className="w-full bg-nut-600 hover:bg-nut-700 text-white py-3 text-lg"
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 text-lg"
                   size="lg"
                 >
                   <CreditCard className="w-5 h-5 ml-2" />
