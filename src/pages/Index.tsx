@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import EbookCard from "@/components/EbookCard";
 import Header from "@/components/Header";
 import CartSheet from "@/components/CartSheet";
+import AnimatedBook3D from "@/components/AnimatedBook3D";
 
 // Sample ebook data in Dari
 const sampleEbooks = [
@@ -141,6 +141,12 @@ const Index = () => {
           <p className="text-xl text-persian-100 mb-8 max-w-2xl mx-auto">
             هزاران کتاب الکترونیک در دسترس شما - از تاریخ و ادبیات تا علم و تکنولوژی
           </p>
+          
+          {/* 3D Book Animation */}
+          <div className="mb-8">
+            <AnimatedBook3D />
+          </div>
+          
           <div className="relative max-w-md mx-auto">
             <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
