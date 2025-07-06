@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -133,12 +132,17 @@ const Index = () => {
       <Header cart={cart} onCartOpen={() => setIsCartOpen(true)} />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-r from-teal-800 via-teal-700 to-cyan-700">
+      <section 
+        className="relative py-20 px-4 text-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/039850eb-06de-4c7f-a928-f292332f3e75.png')`
+        }}
+      >
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             خانه ی کتاب
           </h1>
-          <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             هزاران کتاب الکترونیک در دسترس شما - از تاریخ و ادبیات تا علم و تکنولوژی
           </p>
           <div className="relative max-w-md mx-auto">
@@ -148,7 +152,7 @@ const Index = () => {
               placeholder="جستجوی کتاب..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pr-10 py-3 text-lg border-2 border-white/20 bg-white/10 text-white placeholder:text-white/70 focus:bg-white focus:text-gray-900 transition-all"
+              className="pr-10 py-3 text-lg border-2 border-white/20 bg-white/10 text-white placeholder:text-white/70 focus:bg-white focus:text-gray-900 transition-all backdrop-blur-sm"
             />
           </div>
         </div>
