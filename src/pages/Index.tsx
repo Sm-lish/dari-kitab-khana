@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +9,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import EbookCard from "@/components/EbookCard";
 import Header from "@/components/Header";
 import CartSheet from "@/components/CartSheet";
-import AnimatedBook3D from "@/components/AnimatedBook3D";
 
 // Sample ebook data in Dari
 const sampleEbooks = [
@@ -132,52 +132,25 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-persian-50 to-orange-50">
       <Header cart={cart} onCartOpen={() => setIsCartOpen(true)} />
       
-      {/* Hero Section with 3D Book */}
-      <section className="relative py-20 px-4 bg-gradient-to-r from-persian-600 via-persian-500 to-orange-500 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-right">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-                خانه کتاب
-              </h1>
-              <p className="text-xl text-persian-100 mb-8 max-w-2xl mx-auto lg:mx-0">
-                هزاران کتاب الکترونیک در دسترس شما - از تاریخ و ادبیات تا علم و تکنولوژی
-              </p>
-              <div className="relative max-w-md mx-auto lg:mx-0">
-                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <Input
-                  type="text"
-                  placeholder="جستجوی کتاب..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pr-10 py-3 text-lg border-2 border-white/20 bg-white/10 text-white placeholder:text-white/70 focus:bg-white focus:text-gray-900 transition-all"
-                />
-              </div>
-            </div>
-            
-            {/* 3D Animated Book */}
-            <div className="flex justify-center lg:justify-start">
-              <AnimatedBook3D />
-            </div>
-          </div>
-        </div>
-        
-        {/* Floating particles background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {Array.from({ length: 20 }, (_, i) => (
-            <div
-              key={i}
-              className="absolute bg-white/10 rounded-full animate-pulse"
-              style={{
-                width: Math.random() * 4 + 2 + 'px',
-                height: Math.random() * 4 + 2 + 'px',
-                left: Math.random() * 100 + '%',
-                top: Math.random() * 100 + '%',
-                animationDelay: Math.random() * 2 + 's',
-                animationDuration: (Math.random() * 3 + 2) + 's'
-              }}
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 text-center bg-gradient-to-r from-persian-600 via-persian-500 to-orange-500">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+            خانه کتاب
+          </h1>
+          <p className="text-xl text-persian-100 mb-8 max-w-2xl mx-auto">
+            هزاران کتاب الکترونیک در دسترس شما - از تاریخ و ادبیات تا علم و تکنولوژی
+          </p>
+          <div className="relative max-w-md mx-auto">
+            <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Input
+              type="text"
+              placeholder="جستجوی کتاب..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pr-10 py-3 text-lg border-2 border-white/20 bg-white/10 text-white placeholder:text-white/70 focus:bg-white focus:text-gray-900 transition-all"
             />
-          ))}
+          </div>
         </div>
       </section>
 
