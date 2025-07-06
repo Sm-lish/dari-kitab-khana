@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { Badge } from "@/components/ui/badge";
 import { Trash2, CreditCard } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { handlePayPalCheckout } from "@/services/paypalService";
 
 interface CartSheetProps {
   cart: any[];
@@ -14,14 +15,17 @@ interface CartSheetProps {
 }
 
 const CartSheet = ({ cart, isOpen, onClose, onRemoveItem, totalAmount }: CartSheetProps) => {
-  const handlePayPalCheckout = () => {
-    // In a real app, this would integrate with PayPal SDK
-    const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=your-paypal-email@example.com&item_name=Digital Books&amount=${totalAmount}&currency_code=USD&return=http://yoursite.com/success&cancel_return=http://yoursite.com/cancel`;
+  const handleCheckout = () => {
+    const orderData = {
+      items: cart.map(item => ({
+        id: item.id,
+        title: item.title,
+        price: item.price
+      })),
+      totalAmount
+    };
     
-    // Open PayPal in a new tab
-    window.open(paypalUrl, '_blank');
-    
-    console.log("Redirecting to PayPal for payment of $", totalAmount);
+    handlePayPalCheckout(orderData);
   };
 
   return (
@@ -85,7 +89,7 @@ const CartSheet = ({ cart, isOpen, onClose, onRemoveItem, totalAmount }: CartShe
 
                 {/* PayPal Button */}
                 <Button
-                  onClick={handlePayPalCheckout}
+                  onClick={handleCheckout}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
                   size="lg"
                 >
