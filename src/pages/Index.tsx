@@ -140,7 +140,7 @@ const Index = () => {
       >
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            خانه ی کتاب
+            خانه‌ی کتاب
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             هزاران کتاب الکترونیک در دسترس شما - از تاریخ و ادبیات تا علم و تکنولوژی
@@ -226,10 +226,10 @@ const Index = () => {
           <div className="flex items-center justify-center mb-6">
             <img 
               src="/lovable-uploads/b8506947-de07-433b-9b4a-e9946d6d1b78.png" 
-              alt="خانه ی کتاب" 
+              alt="خانه‌ی کتاب" 
               className="w-8 h-8 ml-2 object-contain"
             />
-            <span className="text-2xl font-bold">خانه ی کتاب</span>
+            <span className="text-2xl font-bold">خانه‌ی کتاب</span>
           </div>
           <p className="text-teal-300 mb-6">
             بهترین کتاب‌های الکترونیک را با ما کشف کنید

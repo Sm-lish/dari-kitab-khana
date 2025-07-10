@@ -18,10 +18,10 @@ const Header = ({ cart, onCartOpen }: HeaderProps) => {
           <div className="flex items-center space-x-3 space-x-reverse">
             <img 
               src="/lovable-uploads/b8506947-de07-433b-9b4a-e9946d6d1b78.png" 
-              alt="خانه ی کتاب" 
+              alt="خانه‌ی کتاب" 
               className="w-10 h-10 object-contain"
             />
-            <h1 className="text-2xl font-bold gradient-text">خانه ی کتاب</h1>
+            <h1 className="text-2xl font-bold gradient-text">خانه‌ی کتاب</h1>
           </div>
 
           {/* Desktop Navigation */}
